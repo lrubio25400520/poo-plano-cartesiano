@@ -1,75 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
 /**
- *
- * @author LuisG
+ * Clase Punto — modela un punto del plano cartesiano.
+ * Subtemas: 2.1 (declaración), 2.3 (this), 2.4 (métodos), 2.5 (constructor).
  */
 public class Punto {
+// Subtema 2.1 — Atributos privados (encapsulamiento)
 
-    private double x; 
-    private double y;
-    private String label;
-    private int cuadrante;
-    private String color;
+    private String etiqueta;
+    private int x;
+    private int y;
+// Subtema 2.5 — Constructor con parámetros
 
-    public Punto(double x, double y, String label, int cuadrante, String color) {
+    public Punto(String etiqueta, int x, int y) {
+        this.etiqueta = etiqueta; // Subtema 2.3 — this
         this.x = x;
         this.y = y;
-        this.label = label;
-        this.cuadrante = cuadrante;
-        this.color = color;
+    }
+// Subtema 2.4 — Métodos de acceso (getters) con retorno de valores
+
+    public String getEtiqueta() {
+        return etiqueta;
     }
 
- 
-    public double getX() {
+    public int getX() {
         return x;
     }
 
-    public double getY() {
+    public int getY() {
         return y;
     }
-
-    public String getLabel() {
-        return label;
-    }
-
-    public int getCuadrante() {
-        return cuadrante;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-  
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
-    public void setCuadrante(int cuadrante) {
-        this.cuadrante = cuadrante;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
+// Representación textual: etiqueta(x,y) ej. A(3,-5)
 
     @Override
     public String toString() {
-        return "Punto " + label +
-               " (" + x + ", " + y + ")\n" +
-               "Cuadrante: " + cuadrante + "\n" +
-               "Color: " + color + "\n";
+        return etiqueta + "(" + x + "," + y + ")";
     }
 }
